@@ -7,11 +7,13 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "gather": "node scripts/gather-property-data.js",
+    "gather-images": "node scripts/gather-images-3d.js",
     "questionnaire": "node scripts/customer-questionnaire.js",
     "estimate": "node scripts/estimate-budget.js",
     "allocate": "node scripts/allocate-contractors.js",
     "contacts": "node scripts/allocate-contractors.js --contacts",
     "full": "npm run gather && npm run estimate && npm run allocate",
+    "full-with-images": "npm run gather && npm run gather-images && npm run estimate && npm run allocate",
     "test": "jest"
   },
   "dependencies": {
@@ -33,6 +35,8 @@
     "renovation",
     "real-estate",
     "estimation",
+    "3d-visualization",
+    "photogrammetry",
     "wyndham-vale"
   ],
   "author": "Property Intelligence Team",

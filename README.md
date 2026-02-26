@@ -17,7 +17,15 @@ A comprehensive platform for gathering property data, assessing renovation needs
 - **Historical Data:** Previous sales, price trends
 - **Aerial Imagery:** Roof measurements, land analysis
 
-### 2. Customer Questionnaire
+### 2. 📸 Image Collection & 3D Visualization
+- **Street View Images:** 360° views from multiple angles
+- **Aerial Imagery:** Satellite photos at multiple zoom levels
+- **Photo Guide:** Step-by-step guide for homeowners to upload photos
+- **3D Reconstruction:** Photogrammetry plan for creating 3D models
+- **Interactive 3D Viewer:** Web-based Three.js visualization
+- **Image Stitching:** Prepares images for panorama creation
+
+### 3. Customer Questionnaire
 Comprehensive 6-section questionnaire covering:
 - Basic property information
 - Current condition assessment (room-by-room)
@@ -26,14 +34,14 @@ Comprehensive 6-section questionnaire covering:
 - Budget & timeline expectations
 - Contact & access information
 
-### 3. Budget Estimation
+### 4. Budget Estimation
 - Itemized project costs
 - 3-tier pricing (Basic/Mid/Luxury)
 - Additional costs (permits, GST, contingency)
 - Phasing recommendations
 - ROI calculations
 
-### 4. Contractor Allocation
+### 5. Contractor Allocation
 - Smart matching algorithm
 - Contractor database with ratings
 - Quote estimation
@@ -51,16 +59,22 @@ npm install
 # Step 1: Gather property data
 npm run gather
 
-# Step 2: Complete customer questionnaire
+# Step 2: Gather images & 3D visualization data
+npm run gather-images
+
+# Step 3: Complete customer questionnaire
 npm run questionnaire
 
-# Step 3: Generate budget estimate
+# Step 4: Generate budget estimate
 npm run estimate
 
-# Step 4: Allocate contractors
+# Step 5: Allocate contractors
 npm run allocate
 
-# Or run all steps
+# Or run all steps with images
+npm run full-with-images
+
+# Start web server
 npm start
 ```
 
@@ -79,15 +93,21 @@ house-intelligence-app/
 │   └── views/
 │       ├── dashboard.ejs      # Main dashboard
 │       ├── questionnaire.ejs  # Customer form
-│       └── estimate.ejs       # Budget report
+│       ├── estimate.ejs       # Budget report
+│       └── 3d-viewer.ejs      # 3D visualization
 ├── scripts/
 │   ├── gather-property-data.js    # Data gathering
+│   ├── gather-images-3d.js        # Image collection & 3D planning
 │   ├── customer-questionnaire.js  # Interactive questionnaire
 │   ├── estimate-budget.js         # Budget calculator
 │   └── allocate-contractors.js    # Contractor matching
 ├── data/
 │   └── 698-armstrong-road-wyndham-vale/
 │       ├── property-profile.json
+│       ├── image-data.json
+│       ├── 3d-reconstruction-plan.json
+│       ├── 3d-viewer.html
+│       ├── photo-guide.html
 │       ├── customer-questionnaire.json
 │       ├── budget-estimate.json
 │       └── contractor-allocation.json
@@ -105,8 +125,11 @@ house-intelligence-app/
 |--------|-----------|------------|
 | Domain/REA | Property values | Web scraping/API |
 | Google Maps | Location, amenities | Google Maps API |
-| Wyndham Council | Zoning, permits | Council website |
+| Google Street View | 360° imagery | Street View Static API |
 | Nearmap | Aerial imagery | Nearmap API |
+| Wyndham Council | Zoning, permits | Council website |
+| User Upload | Property photos | File upload |
+| 3D Tools | 3D reconstruction | OpenDroneMap/Meshroom |
 | Customer | Preferences | Questionnaire |
 | Contractor DB | Service providers | Internal database |
 
@@ -166,7 +189,19 @@ node scripts/gather-property-data.js "698 Armstrong Road, Wyndham Vale"
 - Council zoning information
 - Historical sales data
 
-### 2. Customer Questionnaire
+### 4. Image Collection & 3D Visualization
+```bash
+node scripts/gather-images-3d.js "698 Armstrong Road, Wyndham Vale"
+```
+
+**Output:**
+- Street View images (8 angles)
+- Aerial imagery (multiple zoom levels)
+- Photo upload guide for homeowners
+- 3D reconstruction plan
+- Interactive 3D viewer (Three.js)
+
+### 5. Customer Questionnaire
 ```bash
 node scripts/customer-questionnaire.js
 ```
@@ -178,7 +213,7 @@ Interactive prompts covering:
 - Renovation priorities
 - Budget preferences
 
-### 3. Generate Budget
+### 6. Generate Budget
 ```bash
 node scripts/estimate-budget.js
 ```
@@ -189,7 +224,7 @@ node scripts/estimate-budget.js
 - Phasing recommendations
 - Total budget range
 
-### 4. Allocate Contractors
+### 7. Allocate Contractors
 ```bash
 node scripts/allocate-contractors.js
 # Or get contact list:
@@ -212,10 +247,12 @@ npm run dev
 ```
 
 Access:
-- Dashboard: http://localhost:3000
-- Questionnaire: http://localhost:3000/questionnaire
-- Estimate: http://localhost:3000/estimate
-- Contractors: http://localhost:3000/contractors
+- **Dashboard:** http://localhost:3000
+- **Questionnaire:** http://localhost:3000/questionnaire
+- **Estimate:** http://localhost:3000/estimate
+- **Contractors:** http://localhost:3000/contractors
+- **3D Viewer:** http://localhost:3000/3d-viewer
+- **Photo Guide:** Open `data/*/photo-guide.html` in browser
 
 ---
 
@@ -288,9 +325,15 @@ npm test -- estimate.test.js
 
 ## 🚧 Roadmap
 
-- [ ] Integration with real estate APIs
+- [x] Integration with real estate APIs
+- [x] Google Street View image collection
+- [x] Aerial imagery gathering
+- [x] 3D visualization viewer (Three.js)
+- [x] Photo guide for homeowners
+- [x] Image stitching preparation
 - [ ] AI-powered renovation suggestions
-- [ ] 3D visualization of renovations
+- [ ] Automated 3D reconstruction pipeline
+- [ ] Matterport/Cupix integration
 - [ ] Permit application automation
 - [ ] Progress tracking system
 - [ ] Mobile app
