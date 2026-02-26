@@ -1,0 +1,30 @@
+{
+  "address": "698 Armstrong Road, Wyndham Vale, VIC 3024",
+  "verified": true,
+  "source": "OpenStreetMap / Nominatim",
+  "coordinates": {
+    "lat": -37.8857635,
+    "lon": 144.6073309
+  },
+  "boundingbox": [
+    "-37.8858089",
+    "-37.8856849",
+    "144.6072251",
+    "144.6074367"
+  ],
+  "display_name": "698, Armstrong Road, Wyndham Springs, Wyndham Vale, Melbourne, City of Wyndham, Victoria, 3024, Australia",
+  "property_details": {
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "garage_spaces": 2,
+    "block_size": "416 m²",
+    "lot": 1054,
+    "plan": "PS510502",
+    "property_type": "House"
+  },
+  "google_maps_urls": {
+    "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8857635,144.6073309",
+    "satellite": "https://www.google.com/maps/@-37.8857635,144.6073309,20z",
+    "map": "https://www.google.com/maps/search/698+Armstrong+Road,+Wyndham+Vale+VIC+3024"
+  }
+}

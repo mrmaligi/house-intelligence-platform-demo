@@ -1,0 +1,39 @@
+{
+  "address": "698 Armstrong Road, Wyndham Vale, VIC 3024",
+  "verified": true,
+  "coordinates": {
+    "lat": -37.8857635,
+    "lng": 144.6073309
+  },
+  "propertyDetails": {
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "garageSpaces": 2,
+    "blockSize": "416 m²",
+    "lot": 1054,
+    "propertyType": "House"
+  },
+  "googleMapsUrls": {
+    "streetView": {
+      "main": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8857635,144.6073309",
+      "angles": {
+        "0": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8857635,144.6073309&heading=0&pitch=0",
+        "45": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8857635,144.6073309&heading=45&pitch=0",
+        "90": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8857635,144.6073309&heading=90&pitch=0",
+        "135": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8857635,144.6073309&heading=135&pitch=0",
+        "180": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8857635,144.6073309&heading=180&pitch=0",
+        "225": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8857635,144.6073309&heading=225&pitch=0",
+        "270": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8857635,144.6073309&heading=270&pitch=0",
+        "315": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8857635,144.6073309&heading=315&pitch=0"
+      }
+    },
+    "satellite": "https://www.google.com/maps/@-37.8857635,144.6073309,20z",
+    "map": "https://www.google.com/maps/search/698%20Armstrong%20Road%2C%20Wyndham%20Vale%2C%20VIC%203024",
+    "embedded": {
+      "streetView": "https://www.google.com/maps/embed?pb=!4v1709040000000!6m8!1m7!1sCAoSLEFGMVFpcE1NVEtCXzBJSE9ZZmpuSjhqTjNxeWhxXzk3NWN0Ug!2m2!1d-37.8857635!2d144.6073309!3f0!4f0!5f0.7820865974627469",
+      "satellite": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d250!2d144.6073309!3d-37.8857635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sau",
+      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155!2d144.6073309!3d-37.8857635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDUzJzMyLjMiUyAxNDTCsDM3JzI0LjIiRQ!5e0!3m2!1sen!2sau"
+    }
+  },
+  "generatedAt": "2026-02-26T22:35:02.053Z"
+}
