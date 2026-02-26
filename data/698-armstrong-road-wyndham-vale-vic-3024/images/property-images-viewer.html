@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>698 Armstrong Road - Property Images</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; background: #1a1a1a; color: white; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; text-align: center; }
+        h1 { font-size: 1.8em; margin-bottom: 10px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .section { margin: 40px 0; }
+        .section h2 { color: #667eea; margin-bottom: 20px; font-size: 1.5em; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
+        .map-container { width: 100%; height: 500px; border-radius: 12px; overflow: hidden; margin: 20px 0; }
+        iframe { width: 100%; height: 100%; border: none; }
+        .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .image-card { background: #2a2a2a; border-radius: 12px; overflow: hidden; }
+        .image-card img { width: 100%; height: 250px; object-fit: cover; }
+        .image-card p { padding: 15px; color: #aaa; }
+        .streetview-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px 0; }
+        .sv-link { background: #333; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; color: white; transition: background 0.2s; }
+        .sv-link:hover { background: #667eea; }
+        .note { background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏠 698 Armstrong Road, Wyndham Vale</h1>
+        <p>Property Images & Maps</p>
+    </header>
+
+    <div class="container">
+        <div class="note">
+            <strong>📍 Coordinates:</strong> -37.8923, 144.6234<br>
+            <strong>🌐 View on Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=-37.8923,144.6234" target="_blank" style="color: #667eea;">Open in Google Maps</a>
+        </div>
+
+        <!-- Street View -->
+        <div class="section">
+            <h2>🌐 Street View (360°)</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!4v1709040000000!6m8!1m7!1sCAoSLEFGMVFpcE1...!2m2!1d-37.8923!2d144.6234!3f0!4f0!5f0.7820865974627469"
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            
+            <h3>View from different angles:</h3>
+            <div class="streetview-links">
+                <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8923,144.6234&heading=0" target="_blank" class="sv-link">Front (0°)</a>
+                <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8923,144.6234&heading=90" target="_blank" class="sv-link">Right (90°)</a>
+                <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8923,144.6234&heading=180" target="_blank" class="sv-link">Back (180°)</a>
+                <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8923,144.6234&heading=270" target="_blank" class="sv-link">Left (270°)</a>
+            </div>
+        </div>
+
+        <!-- Satellite View -->
+        <div class="section">
+            <h2>🛰️ Satellite / Aerial View</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d250.0!2d144.6234!3d-37.8923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sau!4v1709040000000"
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Map View -->
+        <div class="section">
+            <h2>🗺️ Map View</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.0!2d144.6234!3d-37.8923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDUzJzMyLjMiUyAxNDTCsDM3JzI0LjIiRQ!5e0!3m2!1sen!2sau!4v1709040000000"
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="section">
+            <h2>📸 Download Actual Image Files</h2>
+            <p style="margin-bottom: 20px;">To download the 16 images as files (JPG), you need a Google Maps API key:</p>
+            
+            <div style="background: #2a2a2a; padding: 20px; border-radius: 8px;">
+                <h3 style="color: #667eea; margin-bottom: 15px;">Steps:</h3>
+                <ol style="margin-left: 20px; line-height: 2;">
+                    <li>Go to <a href="https://developers.google.com/maps/documentation/streetview/get-api-key" target="_blank" style="color: #667eea;">Google Cloud Console</a></li>
+                    <li>Create a new project (free)</li>
+                    <li>Enable "Street View Static API" and "Maps Static API"</li>
+                    <li>Create credentials (API key)</li>
+                    <li>Run the download script with your API key</li>
+                </ol>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="download_images.py" download style="display: inline-block; background: #667eea; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; margin-right: 10px;">⬇️ Download Python Script</a>
+                <a href="download-images.sh" download style="display: inline-block; background: #333; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none;">⬇️ Download Bash Script</a>
+            </div>
+        </div>
+
+        <!-- Direct Links -->
+        <div class="section">
+            <h2>🔗 Direct Google Maps Links</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                <a href="https://www.google.com/maps/search/?api=1&query=-37.8923,144.6234" target="_blank" style="background: #333; padding: 20px; border-radius: 8px; text-decoration: none; color: white; text-align: center;">
+                    <strong>📍 Open in Google Maps</strong>
+                </a>
+                <a href="https://www.google.com/maps/@-37.8923,144.6234,20z" target="_blank" style="background: #333; padding: 20px; border-radius: 8px; text-decoration: none; color: white; text-align: center;">
+                    <strong>🛰️ Satellite View</strong>
+                </a>
+                <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8923,144.6234" target="_blank" style="background: #333; padding: 20px; border-radius: 8px; text-decoration: none; color: white; text-align: center;">
+                    <strong>🌐 Street View</strong>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
