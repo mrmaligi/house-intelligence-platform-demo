@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Estimate - House Intelligence</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.8em; }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #667eea;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .summary-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card h3 {
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .card .value {
+      font-size: 2.2em;
+      font-weight: bold;
+      color: #667eea;
+    }
+    .card.total {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    .card.total h3,
+    .card.total .value {
+      color: white;
+    }
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      color: #333;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #667eea;
+    }
+    .project-item {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .project-name {
+      font-size: 1.2em;
+      font-weight: 600;
+      color: #333;
+    }
+    .project-cost {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #667eea;
+    }
+    .project-meta {
+      display: flex;
+      gap: 20px;
+      color: #666;
+      font-size: 0.9em;
+      margin-top: 10px;
+    }
+    .cost-breakdown {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .cost-item {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .cost-item label {
+      display: block;
+      color: #666;
+      font-size: 0.85em;
+      margin-bottom: 5px;
+    }
+    .cost-item span {
+      font-size: 1.2em;
+      font-weight: 600;
+      color: #333;
+    }
+    .timeline {
+      background: #e8f4f8;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #17a2b8;
+    }
+    .timeline h3 {
+      color: #17a2b8;
+      margin-bottom: 10px;
+    }
+    .phase {
+      padding: 15px;
+      margin: 10px 0;
+      background: white;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+    .phase h4 {
+      color: #667eea;
+      margin-bottom: 5px;
+    }
+    .recommendation {
+      background: #fff3cd;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 10px 0;
+      border-left: 4px solid #ffc107;
+    }
+    .recommendation.high {
+      background: #f8d7da;
+      border-left-color: #dc3545;
+    }
+    .recommendation.medium {
+      background: #fff3cd;
+      border-left-color: #ffc107;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .empty-state h2 {
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #667eea;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .btn:hover { background: #5a6fd6; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💰 Renovation Budget Estimate</h1>
+  </header>
+
+  <div class="container">
+    <a href="/" class="back-link">← Back to Dashboard</a>
+
+    <% if (!estimate) { %>
+      <div class="section empty-state">
+        <h2>No estimate generated yet</h2>
+        <p>Complete the questionnaire first to generate your budget estimate.</p>
+        <a href="/questionnaire" class="btn">Complete Questionnaire</a>
+      </div>
+    <% } else { %>
+
+      <!-- Summary Cards -->
+      <div class="summary-cards">
+        <div class="card">
+          <h3>Projects</h3>
+          <div class="value"><%= estimate.projects.length %></div>
+        </div>
+        <div class="card">
+          <h3>Timeline</h3>
+          <div class="value" style="font-size: 1.5em;"><%= estimate.timeline %></div>
+        </div>
+        <div class="card total">
+          <h3>Total Budget</h3>
+          <div class="value">$<%= (estimate.totalBudget/1000).toFixed(0) %>k</div>
+        </div>
+      </div>
+
+      <!-- Project Breakdown -->
+      <div class="section">
+        <h2>Project Breakdown</h2>
+
+        <% estimate.projects.forEach((project, index) => { %>
+          <div class="project-item">
+            <div class="project-header">
+              <span class="project-name"><%= index + 1 %>. <%= project.name %></span>
+              <span class="project-cost">
+                $<%= project.baseCost.min.toLocaleString() %> - $<%= project.baseCost.max.toLocaleString() %>
+              </span>
+            </div>
+            <p><%= project.description %></p>
+            
+            <div class="project-meta">
+              <span>⏱️ <%= project.timeline %></span>
+              <span>📊 <%= project.complexity %> complexity</span>
+              <span>🏷️ <%= project.baseCost.tier %> tier</span>
+            </div>
+
+            <% if (project.inclusions) { %>
+              <div style="margin-top: 15px;">
+                <strong>Includes:</strong>
+                <ul style="margin-left: 20px; margin-top: 5px;">
+                  <% project.inclusions.slice(0, 4).forEach(item => { %>
+                    <li><%= item %></li>
+                  <% }); %>
+                </ul>
+              </div>
+            <% } %>
+          </div>
+        <% }); %>
+      </div>
+
+      <!-- Cost Breakdown -->
+      <div class="section">
+        <h2>Cost Breakdown</h2>
+        
+        <div class="cost-breakdown">
+          <div class="cost-item">
+            <label>Projects Subtotal</label>
+            <span>$<%= estimate.subtotal.toLocaleString() %></span>
+          </div>
+          <div class="cost-item">
+            <label>Design Fees (5%)</label>
+            <span>$<%= estimate.additionalCosts.designFees.toLocaleString() %></span>
+          </div>
+          <div class="cost-item">
+            <label>Permits & Approvals (3%)</label>
+            <span>$<%= estimate.additionalCosts.permitsAndApprovals.toLocaleString() %></span>
+          </div>
+          <div class="cost-item">
+            <label>Project Management (8%)</label>
+            <span>$<%= estimate.additionalCosts.projectManagement.toLocaleString() %></span>
+          </div>
+          <div class="cost-item">
+            <label>Contingency (15%)</label>
+            <span>$<%= estimate.additionalCosts.contingency.toLocaleString() %></span>
+          </div>
+          <div class="cost-item">
+            <label>GST (10%)</label>
+            <span>$<%= estimate.additionalCosts.gst.toLocaleString() %></span>
+          </div>
+          <div class="cost-item" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+            <label style="color: rgba(255,255,255,0.9);">TOTAL BUDGET</label>
+            <span style="color: white; font-size: 1.5em;">$<%= estimate.totalBudget.toLocaleString() %></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phasing -->
+      <% if (estimate.phasingRecommendation && estimate.phasingRecommendation.length > 0) { %>
+        <div class="section">
+          <h2>📅 Recommended Phasing</h2>
+          
+          <% estimate.phasingRecommendation.forEach(phase => { %>
+            <div class="phase">
+              <h4>Phase <%= phase.phase %>: <%= phase.name %></h4>
+              <p>Estimated duration: <strong><%= phase.estimatedDuration %></strong></p>
+              <ul style="margin-left: 20px; margin-top: 10px;">
+                <% phase.projects.forEach(p => { %>
+                  <li><%= p.name %></li>
+                <% }); %>
+              </ul>
+            </div>
+          <% }); %>
+        </div>
+      <% } %>
+
+      <!-- Recommendations -->
+      <div class="section">
+        <h2>💡 Recommendations</h2>
+        
+        <% estimate.recommendations.forEach(rec => { %>
+          <div class="recommendation <%= rec.priority.toLowerCase() %>">
+            <strong>[<%= rec.priority %>] <%= rec.type %>:</strong> <%= rec.message %>
+          </div>
+        <% }); %>
+      </div>
+
+      <!-- Next Steps -->
+      <div class="section" style="text-align: center;">
+        <h2>Next Steps</h2>
+        <p style="margin-bottom: 20px;">Ready to find contractors for your renovation?</p>
+        <a href="/contractors" class="btn">View Matched Contractors →</a>
+      </div>
+
+    <% } %>
+  </div>
+</body>
+</html>

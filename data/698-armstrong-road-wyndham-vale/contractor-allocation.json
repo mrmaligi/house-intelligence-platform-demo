@@ -1,0 +1,108 @@
+{
+  "propertyId": "698-armstrong-road-wyndham-vale",
+  "allocatedAt": "2024-01-15T11:00:00.000Z",
+  "projects": [
+    {
+      "project": {
+        "name": "Kitchen Renovation",
+        "baseCost": { "min": 25000, "max": 35000 }
+      },
+      "recommendedContractors": [
+        {
+          "id": "CONT001",
+          "name": "Elite Kitchens & Bathrooms",
+          "rating": 4.8,
+          "reviews": 127,
+          "specialties": ["kitchen", "bathroom"],
+          "location": "Wyndham Vale",
+          "availability": "2 weeks",
+          "estimatedQuote": { "min": 28000, "max": 32000 },
+          "matchScore": 92,
+          "whyRecommended": "Specializes in kitchen, Excellent rating, Local to area",
+          "contact": { "phone": "0400 111 222", "email": "elite@example.com" }
+        },
+        {
+          "id": "CONT006",
+          "name": "Complete Kitchen Solutions",
+          "rating": 4.6,
+          "reviews": 89,
+          "specialties": ["kitchen", "cabinetry"],
+          "location": "Werribee",
+          "availability": "3 weeks",
+          "estimatedQuote": { "min": 26000, "max": 30000 },
+          "matchScore": 78,
+          "whyRecommended": "Kitchen specialist, Good value",
+          "contact": { "phone": "0400 555 666", "email": "complete@example.com" }
+        }
+      ]
+    },
+    {
+      "project": {
+        "name": "Main Bathroom Renovation",
+        "baseCost": { "min": 20000, "max": 30000 }
+      },
+      "recommendedContractors": [
+        {
+          "id": "CONT001",
+          "name": "Elite Kitchens & Bathrooms",
+          "rating": 4.8,
+          "reviews": 127,
+          "specialties": ["kitchen", "bathroom"],
+          "location": "Wyndham Vale",
+          "availability": "2 weeks",
+          "estimatedQuote": { "min": 22000, "max": 28000 },
+          "matchScore": 94,
+          "whyRecommended": "Specializes in bathroom, Excellent rating, Local to area",
+          "contact": { "phone": "0400 111 222", "email": "elite@example.com" }
+        }
+      ]
+    },
+    {
+      "project": {
+        "name": "Exterior Painting",
+        "baseCost": { "min": 8000, "max": 12000 }
+      },
+      "recommendedContractors": [
+        {
+          "id": "CONT004",
+          "name": "Master Painters Co",
+          "rating": 4.6,
+          "reviews": 156,
+          "specialties": ["painting", "exterior"],
+          "location": "Tarneit",
+          "availability": "1 week",
+          "estimatedQuote": { "min": 8500, "max": 11000 },
+          "matchScore": 88,
+          "whyRecommended": "Painting specialist, Quick availability, Good reviews",
+          "contact": { "phone": "0400 777 888", "email": "master@example.com" }
+        }
+      ]
+    },
+    {
+      "project": {
+        "name": "Solar Panel Installation",
+        "baseCost": { "min": 6000, "max": 9000 }
+      },
+      "recommendedContractors": [
+        {
+          "id": "CONT005",
+          "name": "Green Energy Installations",
+          "rating": 4.9,
+          "reviews": 312,
+          "specialties": ["solar", "electrical", "insulation"],
+          "location": "Werribee",
+          "availability": "3 days",
+          "estimatedQuote": { "min": 6500, "max": 8000 },
+          "matchScore": 96,
+          "whyRecommended": "Solar specialist, Highest rating, Quick availability",
+          "contact": { "phone": "0400 999 000", "email": "green@example.com" }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalContractors": 4,
+    "totalEstimatedCost": 83000,
+    "estimatedTimeline": "3-4 months"
+  }
+}

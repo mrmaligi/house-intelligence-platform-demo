@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Questionnaire - House Intelligence</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.8em; margin-bottom: 5px; }
+    .progress-bar {
+      background: #e0e0e0;
+      height: 8px;
+      border-radius: 4px;
+      margin: 30px 0;
+      overflow: hidden;
+    }
+    .progress-fill {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s;
+    }
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: none;
+    }
+    .section.active { display: block; }
+    .section h2 {
+      color: #667eea;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #667eea;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #555;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1em;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .checkbox-item input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: #667eea;
+    }
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    .btn {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+    .btn-primary:hover { background: #5a6fd6; }
+    .btn-secondary {
+      background: #e0e0e0;
+      color: #555;
+    }
+    .btn-secondary:hover { background: #d0d0d0; }
+    .btn-success {
+      background: #28a745;
+      color: white;
+    }
+    .btn-success:hover { background: #218838; }
+    .success-message {
+      background: #d4edda;
+      color: #155724;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      display: none;
+    }
+    .success-message.show { display: block; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📝 Property Questionnaire</h1>
+    <p>Help us understand your renovation needs</p>
+  </header>
+
+  <div class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressBar"></div>
+    </div>
+
+    <form id="questionnaireForm">
+      <!-- Section 1: Basic Info -->
+      <div class="section active" data-section="1">
+        <h2>1. Basic Property Information</h2>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>Year Built</label>
+            <input type="number" name="basicInfo.yearBuilt" placeholder="2015" required>
+          </div>
+          <div class="form-group">
+            <label>Year Purchased</label>
+            <input type="number" name="basicInfo.yearPurchased" placeholder="2019" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Purchase Price</label>
+            <input type="text" name="basicInfo.purchasePrice" placeholder="$520,000">
+          </div>
+          <div class="form-group">
+            <label>Current Market Value (est.)</label>
+            <input type="text" name="basicInfo.currentMarketValue" placeholder="$650,000">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>House Type</label>
+            <select name="basicInfo.houseType">
+              <option>Single Storey</option>
+              <option>Double Storey</option>
+              <option>Townhouse</option>
+              <option>Unit/Apartment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Construction Type</label>
+            <select name="basicInfo.constructionType">
+              <option>Brick Veneer</option>
+              <option>Double Brick</option>
+              <option>Weatherboard</option>
+              <option>Concrete</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Bedrooms</label>
+            <input type="number" name="basicInfo.bedrooms" value="4" min="0">
+          </div>
+          <div class="form-group">
+            <label>Bathrooms</label>
+            <input type="number" name="basicInfo.bathrooms" value="2" min="0">
+          </div>
+          <div class="form-group">
+            <label>Car Spaces</label>
+            <input type="number" name="basicInfo.carSpaces" value="2" min="0">
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <span></span>
+          <button type="button" class="btn btn-primary" onclick="nextSection()">Next →</button>
+        </div>
+      </div>
+
+      <!-- Section 2: Condition -->
+      <div class="section" data-section="2">
+        <h2>2. Current Condition Assessment</h2>
+        
+        <div class="form-group">
+          <label>Roof Condition</label>
+          <select name="condition.roof.condition">
+            <option>Excellent</option>
+            <option selected>Good</option>
+            <option>Fair</option>
+            <option>Poor</option>
+            <option>Needs Replacement</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Exterior Walls Condition</label>
+          <select name="condition.exterior.condition">
+            <option>Excellent</option>
+            <option selected>Good</option>
+            <option>Fair</option>
+            <option>Poor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Windows Type</label>
+          <select name="condition.windows.type">
+            <option>Single Glazed</option>
+            <option>Double Glazed</option>
+            <option>Triple Glazed</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Plumbing Condition</label>
+          <select name="condition.plumbing.condition">
+            <option>Excellent</option>
+            <option selected>Good</option>
+            <option>Fair</option>
+            <option>Poor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Electrical Condition</label>
+          <select name="condition.electrical.condition">
+            <option>Excellent</option>
+            <option selected>Good</option>
+            <option>Fair</option>
+            <option>Poor</option>
+          </select>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary" onclick="prevSection()">← Back</button>
+          <button type="button" class="btn btn-primary" onclick="nextSection()">Next →</button>
+        </div>
+      </div>
+
+      <!-- Section 3: Renovation Plans -->
+      <div class="section" data-section="3">
+        <h2>3. Renovation Plans & Priorities</h2>
+        
+        <div class="form-group">
+          <label>Are you planning renovations?</label>
+          <select name="renovationPlans.wantsRenovation">
+            <option value="true" selected>Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Priority Areas (check all that apply)</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item"><input type="checkbox" name="renovationPlans.priorities" value="Kitchen"> Kitchen</label>
+            <label class="checkbox-item"><input type="checkbox" name="renovationPlans.priorities" value="Bathroom"> Bathroom</label>
+            <label class="checkbox-item"><input type="checkbox" name="renovationPlans.priorities" value="Bedroom"> Bedroom</label>
+            <label class="checkbox-item"><input type="checkbox" name="renovationPlans.priorities" value="Living"> Living Areas</label>
+            <label class="checkbox-item"><input type="checkbox" name="renovationPlans.priorities" value="Exterior"> Exterior</label>
+            <label class="checkbox-item"><input type="checkbox" name="renovationPlans.priorities" value="Flooring"> Flooring</label>
+            <label class="checkbox-item"><input type="checkbox" name="renovationPlans.priorities" value="Landscaping"> Landscaping</label>
+            <label class="checkbox-item"><input type="checkbox" name="renovationPlans.priorities" value="Extension"> Extension</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Budget Range</label>
+          <select name="renovationPlans.budgetRange">
+            <option>$10,000 - $30,000</option>
+            <option>$30,000 - $50,000</option>
+            <option selected>$50,000 - $100,000</option>
+            <option>$100,000 - $200,000</option>
+            <option>$200,000+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Preferred Timeline</label>
+          <select name="renovationPlans.timeline">
+            <option>3 months</option>
+            <option selected>6 months</option>
+            <option>12 months</option>
+            <option>2+ years</option>
+          </select>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary" onclick="prevSection()">← Back</button>
+          <button type="button" class="btn btn-primary" onclick="nextSection()">Next →</button>
+        </div>
+      </div>
+
+      <!-- Section 4: Sustainability -->
+      <div class="section" data-section="4">
+        <h2>4. Sustainability & Smart Home</h2>
+        
+        <div class="form-group">
+          <label>Is energy efficiency important to you?</label>
+          <select name="preferences.sustainability.important">
+            <option value="true" selected>Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Interested in:</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item"><input type="checkbox" name="preferences.sustainability.interests" value="solarPanels" checked> Solar Panels</label>
+            <label class="checkbox-item"><input type="checkbox" name="preferences.sustainability.interests" value="batteryStorage"> Battery Storage</label>
+            <label class="checkbox-item"><input type="checkbox" name="preferences.sustainability.interests" value="rainwaterTank"> Rainwater Tank</label>
+            <label class="checkbox-item"><input type="checkbox" name="preferences.sustainability.interests" value="insulation"> Better Insulation</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Interested in smart home features?</label>
+          <select name="preferences.smartHome.interested">
+            <option value="true" selected>Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary" onclick="prevSection()">← Back</button>
+          <button type="button" class="btn btn-primary" onclick="nextSection()">Next →</button>
+        </div>
+      </div>
+
+      <!-- Section 5: Contact -->
+      <div class="section" data-section="5">
+        <h2>5. Contact Information</h2>
+        
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="contact.ownerName" placeholder="John Smith" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="contact.phone" placeholder="0400 000 000" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="contact.email" placeholder="john@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Best Time to Contact</label>
+          <select name="contact.bestTimeToContact">
+            <option>Morning (9am-12pm)</option>
+            <option>Afternoon (12pm-5pm)</option>
+            <option selected>Evening (5pm-8pm)</option>
+            <option>Anytime</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Additional Notes</label>
+          <textarea name="contact.additionalNotes" rows="3" placeholder="Any special requirements or information..."></textarea>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary" onclick="prevSection()">← Back</button>
+          <button type="submit" class="btn btn-success">Submit Questionnaire</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="success-message" id="successMessage">
+      <h2>✅ Questionnaire Submitted!</h2>
+      <p>Thank you for providing your property details.</p>
+      <p>Next step: <a href="/estimate">Generate your budget estimate</a></p>
+    </div>
+  </div>
+
+  <script>
+    let currentSection = 1;
+    const totalSections = 5;
+
+    function updateProgress() {
+      const progress = (currentSection / totalSections) * 100;
+      document.getElementById('progressBar').style.width = progress + '%';
+    }
+
+    function showSection(n) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.querySelector(`.section[data-section="${n}"]`).classList.add('active');
+      currentSection = n;
+      updateProgress();
+    }
+
+    function nextSection() {
+      if (currentSection < totalSections) {
+        showSection(currentSection + 1);
+      }
+    }
+
+    function prevSection() {
+      if (currentSection > 1) {
+        showSection(currentSection - 1);
+      }
+    }
+
+    document.getElementById('questionnaireForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(e.target);
+      const data = {};
+      
+      // Convert form data to structured object
+      formData.forEach((value, key) => {
+        const keys = key.split('.');
+        let current = data;
+        for (let i = 0; i < keys.length - 1; i++) {
+          if (!current[keys[i]]) current[keys[i]] = {};
+          current = current[keys[i]];
+        }
+        current[keys[keys.length - 1]] = value;
+      });
+
+      try {
+        const response = await fetch('/questionnaire', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        
+        if (response.ok) {
+          document.getElementById('questionnaireForm').style.display = 'none';
+          document.getElementById('successMessage').classList.add('show');
+        }
+      } catch (error) {
+        alert('Error submitting form. Please try again.');
+      }
+    });
+
+    updateProgress();
+  </script>
+</body>
+</html>

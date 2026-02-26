@@ -1,0 +1,129 @@
+{
+  "propertyId": "698-armstrong-road-wyndham-vale",
+  "generatedAt": "2024-01-15T10:30:00.000Z",
+  "projects": [
+    {
+      "name": "Kitchen Renovation",
+      "description": "Complete kitchen renovation (15 sqm) - Mid tier",
+      "baseCost": {
+        "min": 25000,
+        "max": 35000,
+        "tier": "mid"
+      },
+      "timeline": "4-6 weeks",
+      "complexity": "High",
+      "inclusions": [
+        "Cabinetry (custom or flat-pack)",
+        "Benchtops (stone/laminate)",
+        "Appliances (cooktop, oven, rangehood)",
+        "Sink and tapware"
+      ]
+    },
+    {
+      "name": "Main Bathroom Renovation",
+      "description": "Complete bathroom renovation (8 sqm) - Mid tier",
+      "baseCost": {
+        "min": 20000,
+        "max": 30000,
+        "tier": "mid"
+      },
+      "timeline": "3-4 weeks",
+      "complexity": "High"
+    },
+    {
+      "name": "Exterior Painting",
+      "description": "Full exterior repaint (180 sqm)",
+      "baseCost": {
+        "min": 8000,
+        "max": 12000,
+        "tier": "mid"
+      },
+      "timeline": "1-2 weeks",
+      "complexity": "Medium"
+    },
+    {
+      "name": "Solar Panel Installation",
+      "description": "6.6kW solar system with inverter",
+      "baseCost": {
+        "min": 6000,
+        "max": 9000,
+        "tier": "mid"
+      },
+      "timeline": "1-2 days",
+      "complexity": "Medium",
+      "roi": "3-5 years typical payback"
+    },
+    {
+      "name": "Flooring Upgrade",
+      "description": "Timber flooring (60 sqm)",
+      "baseCost": {
+        "min": 7200,
+        "max": 10800,
+        "tier": "mid"
+      },
+      "timeline": "3-5 days",
+      "complexity": "Medium"
+    }
+  ],
+  "subtotal": 82800,
+  "additionalCosts": {
+    "designFees": 4140,
+    "permitsAndApprovals": 2484,
+    "projectManagement": 6624,
+    "contingency": 12420,
+    "gst": 10847,
+    "total": 119315
+  },
+  "totalBudget": 119315,
+  "phasingRecommendation": [
+    {
+      "phase": 1,
+      "name": "Wet Areas",
+      "projects": [
+        { "name": "Kitchen Renovation" },
+        { "name": "Main Bathroom Renovation" }
+      ],
+      "estimatedDuration": "2-3 months"
+    },
+    {
+      "phase": 2,
+      "name": "Interior Finishes",
+      "projects": [
+        { "name": "Flooring Upgrade" }
+      ],
+      "estimatedDuration": "2-3 weeks"
+    },
+    {
+      "phase": 3,
+      "name": "Exterior & Solar",
+      "projects": [
+        { "name": "Exterior Painting" },
+        { "name": "Solar Panel Installation" }
+      ],
+      "estimatedDuration": "2-3 weeks"
+    }
+  ],
+  "timeline": "3-4 months",
+  "recommendations": [
+    {
+      "type": "finance",
+      "message": "Consider construction loan or home equity loan for large renovation",
+      "priority": "High"
+    },
+    {
+      "type": "phasing",
+      "message": "Projects should be phased to manage cash flow and livability",
+      "priority": "High"
+    },
+    {
+      "type": "contingency",
+      "message": "Keep 15% contingency for unexpected issues (already included in estimate)",
+      "priority": "Medium"
+    },
+    {
+      "type": "quotes",
+      "message": "Get at least 3 quotes from licensed builders for each major project",
+      "priority": "High"
+    }
+  ]
+}

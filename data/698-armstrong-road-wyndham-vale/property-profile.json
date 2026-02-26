@@ -1,0 +1,48 @@
+{
+  "address": "698 Armstrong Road, Wyndham Vale, VIC 3024",
+  "gatheredAt": "2024-01-15T10:00:00.000Z",
+  "sources": {
+    "realEstate": {
+      "estimatedValue": "$650,000 - $720,000",
+      "propertyType": "House",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "carSpaces": 2,
+      "landSize": "550 sqm",
+      "floorArea": "180 sqm",
+      "yearBuilt": "2015"
+    },
+    "googleMaps": {
+      "coordinates": {
+        "lat": -37.8923,
+        "lng": 144.6234
+      },
+      "streetViewUrl": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8923,144.6234",
+      "satelliteViewUrl": "https://www.google.com/maps/@-37.8923,144.6234,18z",
+      "nearbyAmenities": [
+        { "name": "Wyndham Vale Station", "type": "train", "distance": "1.2km" },
+        { "name": "Wyndham Vale Shopping Centre", "type": "shopping", "distance": "0.8km" },
+        { "name": "Wyndham Vale Primary School", "type": "school", "distance": "1.5km" }
+      ]
+    },
+    "council": {
+      "council": "Wyndham City Council",
+      "zoning": "General Residential Zone (GRZ)",
+      "planningScheme": "Wyndham Planning Scheme",
+      "rates": {
+        "annual": "$2,450",
+        "capitalImprovedValue": "$680,000"
+      }
+    },
+    "historical": {
+      "previousSales": [
+        { "date": "2023-03-15", "price": "$645,000", "type": "Private Sale" },
+        { "date": "2019-11-22", "price": "$520,000", "type": "Auction" }
+      ],
+      "marketTrends": {
+        "suburbGrowth": "+8.5% (12 months)",
+        "medianPrice": "$650,000"
+      }
+    }
+  }
+}
