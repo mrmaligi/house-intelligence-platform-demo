@@ -1,0 +1,162 @@
+{
+  "exterior": {
+    "method": "panorama",
+    "images": [
+      {
+        "angle": 0,
+        "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=0&key=DEMO_KEY",
+        "filename": "streetview_0deg.jpg",
+        "lat": -37.8923,
+        "lng": 144.6234,
+        "pitch": 0,
+        "fov": 90
+      },
+      {
+        "angle": 45,
+        "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=45&pitch=0&key=DEMO_KEY",
+        "filename": "streetview_45deg.jpg",
+        "lat": -37.8923,
+        "lng": 144.6234,
+        "pitch": 0,
+        "fov": 90
+      },
+      {
+        "angle": 90,
+        "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=90&pitch=0&key=DEMO_KEY",
+        "filename": "streetview_90deg.jpg",
+        "lat": -37.8923,
+        "lng": 144.6234,
+        "pitch": 0,
+        "fov": 90
+      },
+      {
+        "angle": 135,
+        "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=135&pitch=0&key=DEMO_KEY",
+        "filename": "streetview_135deg.jpg",
+        "lat": -37.8923,
+        "lng": 144.6234,
+        "pitch": 0,
+        "fov": 90
+      },
+      {
+        "angle": 180,
+        "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=180&pitch=0&key=DEMO_KEY",
+        "filename": "streetview_180deg.jpg",
+        "lat": -37.8923,
+        "lng": 144.6234,
+        "pitch": 0,
+        "fov": 90
+      },
+      {
+        "angle": 225,
+        "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=225&pitch=0&key=DEMO_KEY",
+        "filename": "streetview_225deg.jpg",
+        "lat": -37.8923,
+        "lng": 144.6234,
+        "pitch": 0,
+        "fov": 90
+      },
+      {
+        "angle": 270,
+        "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=270&pitch=0&key=DEMO_KEY",
+        "filename": "streetview_270deg.jpg",
+        "lat": -37.8923,
+        "lng": 144.6234,
+        "pitch": 0,
+        "fov": 90
+      },
+      {
+        "angle": 315,
+        "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=315&pitch=0&key=DEMO_KEY",
+        "filename": "streetview_315deg.jpg",
+        "lat": -37.8923,
+        "lng": 144.6234,
+        "pitch": 0,
+        "fov": 90
+      },
+      {
+        "angle": 0,
+        "pitch": -20,
+        "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=-20&key=DEMO_KEY",
+        "filename": "streetview_pitch-20.jpg",
+        "type": "elevation"
+      },
+      {
+        "angle": 0,
+        "pitch": 0,
+        "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=0&key=DEMO_KEY",
+        "filename": "streetview_pitch0.jpg",
+        "type": "elevation"
+      },
+      {
+        "angle": 0,
+        "pitch": 20,
+        "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=20&key=DEMO_KEY",
+        "filename": "streetview_pitch20.jpg",
+        "type": "elevation"
+      }
+    ],
+    "output": "exterior_panorama.jpg",
+    "options": {
+      "projection": "equirectangular",
+      "blend": "multi-band",
+      "outputWidth": 4096
+    }
+  },
+  "aerial": {
+    "method": "mosaic",
+    "images": [
+      {
+        "source": "Google Satellite",
+        "zoom": 18,
+        "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=18&size=640x640&maptype=satellite&key=DEMO_KEY",
+        "filename": "aerial_google_z18.jpg",
+        "type": "satellite"
+      },
+      {
+        "source": "Google Satellite",
+        "zoom": 19,
+        "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=19&size=640x640&maptype=satellite&key=DEMO_KEY",
+        "filename": "aerial_google_z19.jpg",
+        "type": "satellite"
+      },
+      {
+        "source": "Google Satellite",
+        "zoom": 20,
+        "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=20&size=640x640&maptype=satellite&key=DEMO_KEY",
+        "filename": "aerial_google_z20.jpg",
+        "type": "satellite"
+      },
+      {
+        "source": "Google Satellite",
+        "zoom": 21,
+        "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=21&size=640x640&maptype=satellite&key=DEMO_KEY",
+        "filename": "aerial_google_z21.jpg",
+        "type": "satellite"
+      },
+      {
+        "source": "Nearmap (High-Res)",
+        "zoom": 22,
+        "url": "https://api.nearmap.com/coverage/v2/coord/-37.8923/144.6234?apikey=DEMO",
+        "filename": "aerial_nearmap_hires.jpg",
+        "type": "high-resolution",
+        "resolution": "5cm/pixel"
+      }
+    ],
+    "output": "aerial_mosaic.jpg",
+    "options": {
+      "alignment": "affine",
+      "blending": "feather"
+    }
+  },
+  "interior": {
+    "method": "cubemap",
+    "description": "Requires user-uploaded photos",
+    "recommendedTools": [
+      "Matterport",
+      "Cupix",
+      "Google Street View Studio",
+      "OpenDroneMap"
+    ]
+  }
+}

@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Guide - 698 Armstrong Road, Wyndham Vale, VIC 3024</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, sans-serif; background: #f5f7fa; color: #333; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 20px; text-align: center; }
+    h1 { font-size: 1.8em; margin-bottom: 10px; }
+    .section { background: white; border-radius: 12px; padding: 25px; margin: 20px 0; }
+    .shot { border: 2px solid #e0e0e0; border-radius: 8px; padding: 20px; margin: 15px 0; }
+    .shot h3 { color: #667eea; margin-bottom: 10px; }
+    .shot.complete { border-color: #28a745; background: #f8fff8; }
+    .upload-area { border: 3px dashed #667eea; border-radius: 12px; padding: 40px; text-align: center; margin: 20px 0; cursor: pointer; }
+    .upload-area:hover { background: #f0f4ff; }
+    .tips { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 15px 0; }
+    .progress { background: #e0e0e0; height: 8px; border-radius: 4px; overflow: hidden; }
+    .progress-fill { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100%; width: 0%; }
+    .btn { background: #667eea; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📸 Property Photo Guide</h1>
+    <p>698 Armstrong Road, Wyndham Vale, VIC 3024</p>
+  </header>
+  
+  <div class="container">
+    <div class="section">
+      <h2>Progress</h2>
+      <div class="progress"><div class="progress-fill" id="progress"></div></div>
+      <p style="margin-top: 10px;"><span id="uploaded">0</span> / 16 photos uploaded</p>
+    </div>
+
+    <div class="section">
+      <h2>🏠 Exterior Photos Required</h2>
+      
+        <div class="shot" id="shot-exterior_front">
+          <h3>1. Front Exterior</h3>
+          <p><strong>Full front facade from street</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 Stand across the street, capture entire front including roofline</p>
+          <div class="upload-area" onclick="document.getElementById('file-exterior_front').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-exterior_front" accept="image/*" style="display:none" onchange="uploadPhoto('exterior_front')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-exterior_left">
+          <h3>2. Left Side</h3>
+          <p><strong>Left side of house</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 Stand at property boundary, capture full side elevation</p>
+          <div class="upload-area" onclick="document.getElementById('file-exterior_left').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-exterior_left" accept="image/*" style="display:none" onchange="uploadPhoto('exterior_left')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-exterior_right">
+          <h3>3. Right Side</h3>
+          <p><strong>Right side of house</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 Stand at property boundary, capture full side elevation</p>
+          <div class="upload-area" onclick="document.getElementById('file-exterior_right').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-exterior_right" accept="image/*" style="display:none" onchange="uploadPhoto('exterior_right')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-exterior_rear">
+          <h3>4. Rear Exterior</h3>
+          <p><strong>Back of house</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 From backyard, capture entire rear facade</p>
+          <div class="upload-area" onclick="document.getElementById('file-exterior_rear').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-exterior_rear" accept="image/*" style="display:none" onchange="uploadPhoto('exterior_rear')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-roof_overview">
+          <h3>5. Roof Overview</h3>
+          <p><strong>Roof from elevated position</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 From upstairs window or drone if possible</p>
+          <div class="upload-area" onclick="document.getElementById('file-roof_overview').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-roof_overview" accept="image/*" style="display:none" onchange="uploadPhoto('roof_overview')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-driveway">
+          <h3>6. Driveway & Entry</h3>
+          <p><strong>Approach to house</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 Capture driveway, path, and front entry</p>
+          <div class="upload-area" onclick="document.getElementById('file-driveway').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-driveway" accept="image/*" style="display:none" onchange="uploadPhoto('driveway')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-garden_front">
+          <h3>7. Front Garden</h3>
+          <p><strong>Landscaping and front yard</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 Capture garden beds, lawn, trees</p>
+          <div class="upload-area" onclick="document.getElementById('file-garden_front').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-garden_front" accept="image/*" style="display:none" onchange="uploadPhoto('garden_front')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-garden_rear">
+          <h3>8. Rear Garden</h3>
+          <p><strong>Backyard area</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 Full backyard view including boundaries</p>
+          <div class="upload-area" onclick="document.getElementById('file-garden_rear').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-garden_rear" accept="image/*" style="display:none" onchange="uploadPhoto('garden_rear')">
+          </div>
+        </div>
+      
+    </div>
+
+    <div class="section">
+      <h2>🛋️ Interior Photos Required</h2>
+      
+        <div class="shot" id="shot-entry_hall">
+          <h3>1. Entry Hall</h3>
+          <p><strong>Main entrance interior</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 From doorway, capture full view of entry space</p>
+          <div class="upload-area" onclick="document.getElementById('file-entry_hall').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-entry_hall" accept="image/*" style="display:none" onchange="uploadPhoto('entry_hall')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-living_room">
+          <h3>2. Living Room</h3>
+          <p><strong>Main living area</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 From each corner, capture all walls and features</p>
+          <div class="upload-area" onclick="document.getElementById('file-living_room').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-living_room" accept="image/*" style="display:none" onchange="uploadPhoto('living_room')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-kitchen">
+          <h3>3. Kitchen</h3>
+          <p><strong>Kitchen area</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 Capture all cabinets, appliances, and layout</p>
+          <div class="upload-area" onclick="document.getElementById('file-kitchen').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-kitchen" accept="image/*" style="display:none" onchange="uploadPhoto('kitchen')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-kitchen_panorama">
+          <h3>4. Kitchen Panorama</h3>
+          <p><strong>360° view of kitchen</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 Stand in center, rotate and capture all angles</p>
+          <div class="upload-area" onclick="document.getElementById('file-kitchen_panorama').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-kitchen_panorama" accept="image/*" style="display:none" onchange="uploadPhoto('kitchen_panorama')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-master_bedroom">
+          <h3>5. Master Bedroom</h3>
+          <p><strong>Main bedroom</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 From doorway and opposite corner</p>
+          <div class="upload-area" onclick="document.getElementById('file-master_bedroom').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-master_bedroom" accept="image/*" style="display:none" onchange="uploadPhoto('master_bedroom')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-bathroom_main">
+          <h3>6. Main Bathroom</h3>
+          <p><strong>Primary bathroom</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 Capture all fixtures, tiles, and layout</p>
+          <div class="upload-area" onclick="document.getElementById('file-bathroom_main').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-bathroom_main" accept="image/*" style="display:none" onchange="uploadPhoto('bathroom_main')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-hallway">
+          <h3>7. Hallway</h3>
+          <p><strong>Main circulation space</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 Capture length and connections to rooms</p>
+          <div class="upload-area" onclick="document.getElementById('file-hallway').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-hallway" accept="image/*" style="display:none" onchange="uploadPhoto('hallway')">
+          </div>
+        </div>
+      
+        <div class="shot" id="shot-ceiling_details">
+          <h3>8. Ceiling Details</h3>
+          <p><strong>Ceiling features</strong></p>
+          <p style="color: #666; margin-top: 8px;">💡 Capture cornices, downlights, ceiling condition</p>
+          <div class="upload-area" onclick="document.getElementById('file-ceiling_details').click()">
+            <p>📷 Click to upload photo</p>
+            <input type="file" id="file-ceiling_details" accept="image/*" style="display:none" onchange="uploadPhoto('ceiling_details')">
+          </div>
+        </div>
+      
+    </div>
+
+    <div class="section tips">
+      <h3>📋 Photography Tips</h3>
+      <ul style="margin-left: 20px; margin-top: 10px;">
+        <li>Use natural daylight when possible</li><li>Take photos in landscape (horizontal) orientation</li><li>Overlap shots by 20-30% for stitching</li><li>Keep camera level and steady</li><li>Include reference points (doors, windows) in multiple shots</li><li>Take multiple shots of each area from different angles</li><li>Use highest resolution setting on your camera</li><li>Label photos by room/location</li>
+      </ul>
+    </div>
+
+    <div class="section" style="text-align: center;">
+      <button class="btn" onclick="completeUpload()">Complete Upload</button>
+    </div>
+  </div>
+
+  <script>
+    let uploadedCount = 0;
+    const totalShots = 16;
+    
+    function uploadPhoto(id) {
+      document.getElementById('shot-' + id).classList.add('complete');
+      uploadedCount++;
+      updateProgress();
+    }
+    
+    function updateProgress() {
+      document.getElementById('uploaded').textContent = uploadedCount;
+      document.getElementById('progress').style.width = (uploadedCount / totalShots * 100) + '%';
+    }
+    
+    function completeUpload() {
+      alert('Photos uploaded! We\'ll process them for 3D reconstruction.');
+    }
+  </script>
+</body>
+</html>

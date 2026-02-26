@@ -1,0 +1,155 @@
+{
+  "address": "698 Armstrong Road, Wyndham Vale, VIC 3024",
+  "gatheredAt": "2026-02-26T21:12:29.617Z",
+  "sources": {
+    "realEstate": {
+      "domain": null,
+      "realestate": null,
+      "estimatedValue": "$650,000 - $720,000",
+      "lastSoldPrice": null,
+      "lastSoldDate": null,
+      "propertyType": "House",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "carSpaces": 2,
+      "landSize": "550 sqm",
+      "floorArea": null,
+      "yearBuilt": null,
+      "listings": []
+    },
+    "googleMaps": {
+      "coordinates": {
+        "lat": -37.8923,
+        "lng": 144.6234
+      },
+      "streetViewUrl": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-37.8923,144.6234",
+      "satelliteViewUrl": "https://www.google.com/maps/@-37.8923,144.6234,18z",
+      "nearbyAmenities": [
+        {
+          "name": "Wyndham Vale Station",
+          "type": "train",
+          "distance": "1.2km"
+        },
+        {
+          "name": "Wyndham Vale Shopping Centre",
+          "type": "shopping",
+          "distance": "0.8km"
+        },
+        {
+          "name": "Wyndham Vale Primary School",
+          "type": "school",
+          "distance": "1.5km"
+        },
+        {
+          "name": "Wyndham Vale Secondary College",
+          "type": "school",
+          "distance": "2.1km"
+        },
+        {
+          "name": "Pacific Werribee",
+          "type": "shopping",
+          "distance": "4.5km"
+        }
+      ],
+      "zoning": null,
+      "floodZone": null,
+      "bushfireZone": null,
+      "transport": {
+        "train": [],
+        "bus": [],
+        "schools": [],
+        "shops": []
+      }
+    },
+    "council": {
+      "council": "Wyndham City Council",
+      "zoning": "General Residential Zone (GRZ)",
+      "planningScheme": "Wyndham Planning Scheme",
+      "overlays": [
+        {
+          "name": "Vegetation Protection Overlay",
+          "code": "VPO"
+        },
+        {
+          "name": "Design and Development Overlay",
+          "code": "DDO"
+        },
+        {
+          "name": "Bushfire Management Overlay",
+          "code": "BMO"
+        }
+      ],
+      "permits": [],
+      "rates": {
+        "annual": "$2,450",
+        "capitalImprovedValue": "$680,000"
+      },
+      "wasteCollection": {
+        "rubbish": "Weekly - Tuesday",
+        "recycling": "Fortnightly - Tuesday",
+        "greenWaste": "Fortnightly - Tuesday"
+      }
+    },
+    "historical": {
+      "previousSales": [
+        {
+          "date": "2023-03-15",
+          "price": "$645,000",
+          "type": "Private Sale"
+        },
+        {
+          "date": "2019-11-22",
+          "price": "$520,000",
+          "type": "Auction"
+        },
+        {
+          "date": "2015-06-10",
+          "price": "$385,000",
+          "type": "Private Sale"
+        }
+      ],
+      "priceHistory": [],
+      "marketTrends": {
+        "suburbGrowth": "+8.5% (12 months)",
+        "medianPrice": "$650,000",
+        "auctionClearance": "72%"
+      }
+    },
+    "permits": {
+      "buildingPermits": [
+        {
+          "year": "2019",
+          "type": "Renovation",
+          "description": "Kitchen and bathroom renovation",
+          "value": "$45,000"
+        },
+        {
+          "year": "2015",
+          "type": "New Build",
+          "description": "Single storey dwelling",
+          "value": "$280,000"
+        }
+      ],
+      "planningPermits": [],
+      "certificates": {
+        "occupancy": null,
+        "compliance": null
+      }
+    },
+    "imagery": {
+      "aerialPhotos": [],
+      "roofArea": "180 sqm",
+      "landArea": "550 sqm",
+      "setbacks": {
+        "front": "6m",
+        "rear": "4m",
+        "sides": "1.5m"
+      },
+      "measurements": {
+        "houseWidth": "12m",
+        "houseDepth": "15m",
+        "roofPitch": "22 degrees"
+      }
+    }
+  }
+}

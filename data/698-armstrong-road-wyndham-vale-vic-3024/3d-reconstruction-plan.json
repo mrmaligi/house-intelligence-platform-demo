@@ -1,0 +1,117 @@
+{
+  "title": "3D Property Visualization Plan",
+  "approaches": [
+    {
+      "name": "Photogrammetry (Recommended)",
+      "description": "Create 3D model from photos using computer vision",
+      "tools": [
+        {
+          "name": "OpenDroneMap",
+          "url": "https://www.opendronemap.org/",
+          "cost": "Free (Open Source)",
+          "complexity": "Medium",
+          "output": "3D mesh, point cloud, orthophoto"
+        },
+        {
+          "name": "Meshroom",
+          "url": "https://alicevision.org/#meshroom",
+          "cost": "Free (Open Source)",
+          "complexity": "Medium",
+          "output": "3D mesh, textures"
+        },
+        {
+          "name": "RealityCapture",
+          "url": "https://www.capturingreality.com/",
+          "cost": "Paid (~$3,500 license)",
+          "complexity": "Low",
+          "output": "High-quality 3D model"
+        }
+      ],
+      "requirements": {
+        "minPhotos": 50,
+        "overlap": "60-80%",
+        "resolution": "Minimum 12MP camera",
+        "processingTime": "2-8 hours depending on photo count"
+      }
+    },
+    {
+      "name": "360° Virtual Tour",
+      "description": "Interactive panoramic tour without full 3D model",
+      "tools": [
+        {
+          "name": "Matterport",
+          "url": "https://matterport.com/",
+          "cost": "Subscription ($9-309/month)",
+          "complexity": "Low",
+          "requires": "Matterport camera or compatible phone"
+        },
+        {
+          "name": "Cupix",
+          "url": "https://www.cupix.com/",
+          "cost": "Subscription",
+          "complexity": "Low",
+          "requires": "360° camera or phone app"
+        },
+        {
+          "name": "Google Street View",
+          "url": "https://www.google.com/streetview/",
+          "cost": "Free",
+          "complexity": "Low",
+          "requires": "360° camera or Street View app"
+        }
+      ],
+      "requirements": {
+        "minPhotos": "10-20 panoramas",
+        "equipment": "360° camera recommended",
+        "processingTime": "1-2 hours"
+      }
+    },
+    {
+      "name": "LiDAR Scanning",
+      "description": "High-precision 3D scanning",
+      "tools": [
+        {
+          "name": "iPhone/iPad Pro LiDAR",
+          "cost": "Free apps available",
+          "complexity": "Low",
+          "apps": [
+            "Polycam",
+            "Scaniverse",
+            "3D Scanner App"
+          ]
+        },
+        {
+          "name": "Professional Scanner",
+          "cost": "Hire service ($500-2000)",
+          "complexity": "None (outsourced)",
+          "accuracy": "Millimeter precision"
+        }
+      ],
+      "bestFor": "Interior spaces, detailed measurements"
+    }
+  ],
+  "recommendation": {
+    "approach": "Photogrammetry + 360° Tour",
+    "reasoning": "Best balance of quality, cost, and ease",
+    "workflow": [
+      "1. Take 100+ photos following the photo guide",
+      "2. Process with OpenDroneMap for 3D model",
+      "3. Create 360° panoramas for key rooms",
+      "4. Combine into interactive web experience"
+    ]
+  },
+  "outputFormats": {
+    "web": [
+      "Three.js visualization",
+      "WebGL viewer",
+      "Embedded 360° tour"
+    ],
+    "model": [
+      "OBJ",
+      "FBX",
+      "glTF",
+      "PLY (point cloud)"
+    ],
+    "measurements": "Accurate to 1-2% of real dimensions"
+  }
+}

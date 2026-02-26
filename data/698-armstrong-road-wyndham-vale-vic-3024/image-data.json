@@ -1,0 +1,557 @@
+{
+  "address": "698 Armstrong Road, Wyndham Vale, VIC 3024",
+  "gatheredAt": "2026-02-26T21:12:33.720Z",
+  "sources": {
+    "streetView": {
+      "source": "Google Street View",
+      "images": [
+        {
+          "angle": 0,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_0deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 45,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=45&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_45deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 90,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=90&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_90deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 135,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=135&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_135deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 180,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=180&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_180deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 225,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=225&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_225deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 270,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=270&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_270deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 315,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=315&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_315deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 0,
+          "pitch": -20,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=-20&key=DEMO_KEY",
+          "filename": "streetview_pitch-20.jpg",
+          "type": "elevation"
+        },
+        {
+          "angle": 0,
+          "pitch": 0,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_pitch0.jpg",
+          "type": "elevation"
+        },
+        {
+          "angle": 0,
+          "pitch": 20,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=20&key=DEMO_KEY",
+          "filename": "streetview_pitch20.jpg",
+          "type": "elevation"
+        }
+      ],
+      "metadata": {}
+    },
+    "aerial": {
+      "source": "Aerial/Satellite",
+      "images": [
+        {
+          "source": "Google Satellite",
+          "zoom": 18,
+          "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=18&size=640x640&maptype=satellite&key=DEMO_KEY",
+          "filename": "aerial_google_z18.jpg",
+          "type": "satellite"
+        },
+        {
+          "source": "Google Satellite",
+          "zoom": 19,
+          "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=19&size=640x640&maptype=satellite&key=DEMO_KEY",
+          "filename": "aerial_google_z19.jpg",
+          "type": "satellite"
+        },
+        {
+          "source": "Google Satellite",
+          "zoom": 20,
+          "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=20&size=640x640&maptype=satellite&key=DEMO_KEY",
+          "filename": "aerial_google_z20.jpg",
+          "type": "satellite"
+        },
+        {
+          "source": "Google Satellite",
+          "zoom": 21,
+          "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=21&size=640x640&maptype=satellite&key=DEMO_KEY",
+          "filename": "aerial_google_z21.jpg",
+          "type": "satellite"
+        },
+        {
+          "source": "Nearmap (High-Res)",
+          "zoom": 22,
+          "url": "https://api.nearmap.com/coverage/v2/coord/-37.8923/144.6234?apikey=DEMO",
+          "filename": "aerial_nearmap_hires.jpg",
+          "type": "high-resolution",
+          "resolution": "5cm/pixel"
+        }
+      ],
+      "coverage": {}
+    }
+  },
+  "imageSets": [],
+  "photoGuide": {
+    "title": "Property Photo Upload Guide",
+    "purpose": "Create virtual tour and 3D reconstruction",
+    "requiredShots": [
+      {
+        "id": "exterior_front",
+        "name": "Front Exterior",
+        "description": "Full front facade from street",
+        "angle": "Eye level",
+        "instructions": "Stand across the street, capture entire front including roofline"
+      },
+      {
+        "id": "exterior_left",
+        "name": "Left Side",
+        "description": "Left side of house",
+        "angle": "Perpendicular to wall",
+        "instructions": "Stand at property boundary, capture full side elevation"
+      },
+      {
+        "id": "exterior_right",
+        "name": "Right Side",
+        "description": "Right side of house",
+        "angle": "Perpendicular to wall",
+        "instructions": "Stand at property boundary, capture full side elevation"
+      },
+      {
+        "id": "exterior_rear",
+        "name": "Rear Exterior",
+        "description": "Back of house",
+        "angle": "Eye level",
+        "instructions": "From backyard, capture entire rear facade"
+      },
+      {
+        "id": "roof_overview",
+        "name": "Roof Overview",
+        "description": "Roof from elevated position",
+        "angle": "High angle",
+        "instructions": "From upstairs window or drone if possible"
+      },
+      {
+        "id": "driveway",
+        "name": "Driveway & Entry",
+        "description": "Approach to house",
+        "angle": "Low angle",
+        "instructions": "Capture driveway, path, and front entry"
+      },
+      {
+        "id": "garden_front",
+        "name": "Front Garden",
+        "description": "Landscaping and front yard",
+        "angle": "Eye level",
+        "instructions": "Capture garden beds, lawn, trees"
+      },
+      {
+        "id": "garden_rear",
+        "name": "Rear Garden",
+        "description": "Backyard area",
+        "angle": "Eye level",
+        "instructions": "Full backyard view including boundaries"
+      }
+    ],
+    "interiorShots": [
+      {
+        "id": "entry_hall",
+        "name": "Entry Hall",
+        "description": "Main entrance interior",
+        "instructions": "From doorway, capture full view of entry space"
+      },
+      {
+        "id": "living_room",
+        "name": "Living Room",
+        "description": "Main living area",
+        "instructions": "From each corner, capture all walls and features"
+      },
+      {
+        "id": "kitchen",
+        "name": "Kitchen",
+        "description": "Kitchen area",
+        "instructions": "Capture all cabinets, appliances, and layout"
+      },
+      {
+        "id": "kitchen_panorama",
+        "name": "Kitchen Panorama",
+        "description": "360° view of kitchen",
+        "instructions": "Stand in center, rotate and capture all angles"
+      },
+      {
+        "id": "master_bedroom",
+        "name": "Master Bedroom",
+        "description": "Main bedroom",
+        "instructions": "From doorway and opposite corner"
+      },
+      {
+        "id": "bathroom_main",
+        "name": "Main Bathroom",
+        "description": "Primary bathroom",
+        "instructions": "Capture all fixtures, tiles, and layout"
+      },
+      {
+        "id": "hallway",
+        "name": "Hallway",
+        "description": "Main circulation space",
+        "instructions": "Capture length and connections to rooms"
+      },
+      {
+        "id": "ceiling_details",
+        "name": "Ceiling Details",
+        "description": "Ceiling features",
+        "instructions": "Capture cornices, downlights, ceiling condition"
+      }
+    ],
+    "bestPractices": [
+      "Use natural daylight when possible",
+      "Take photos in landscape (horizontal) orientation",
+      "Overlap shots by 20-30% for stitching",
+      "Keep camera level and steady",
+      "Include reference points (doors, windows) in multiple shots",
+      "Take multiple shots of each area from different angles",
+      "Use highest resolution setting on your camera",
+      "Label photos by room/location"
+    ],
+    "for3DReconstruction": [
+      "Minimum 50 photos for exterior 3D model",
+      "Minimum 30 photos per room for interior",
+      "Capture overlapping views (60% overlap ideal)",
+      "Include floor, walls, and ceiling in shots",
+      "Walk around the property in a systematic pattern",
+      "Take photos at consistent height (chest level)"
+    ]
+  },
+  "stitchingConfig": {
+    "exterior": {
+      "method": "panorama",
+      "images": [
+        {
+          "angle": 0,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_0deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 45,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=45&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_45deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 90,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=90&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_90deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 135,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=135&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_135deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 180,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=180&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_180deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 225,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=225&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_225deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 270,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=270&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_270deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 315,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=315&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_315deg.jpg",
+          "lat": -37.8923,
+          "lng": 144.6234,
+          "pitch": 0,
+          "fov": 90
+        },
+        {
+          "angle": 0,
+          "pitch": -20,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=-20&key=DEMO_KEY",
+          "filename": "streetview_pitch-20.jpg",
+          "type": "elevation"
+        },
+        {
+          "angle": 0,
+          "pitch": 0,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=0&key=DEMO_KEY",
+          "filename": "streetview_pitch0.jpg",
+          "type": "elevation"
+        },
+        {
+          "angle": 0,
+          "pitch": 20,
+          "url": "https://maps.googleapis.com/maps/api/streetview?size=640x480&location=-37.8923,144.6234&heading=0&pitch=20&key=DEMO_KEY",
+          "filename": "streetview_pitch20.jpg",
+          "type": "elevation"
+        }
+      ],
+      "output": "exterior_panorama.jpg",
+      "options": {
+        "projection": "equirectangular",
+        "blend": "multi-band",
+        "outputWidth": 4096
+      }
+    },
+    "aerial": {
+      "method": "mosaic",
+      "images": [
+        {
+          "source": "Google Satellite",
+          "zoom": 18,
+          "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=18&size=640x640&maptype=satellite&key=DEMO_KEY",
+          "filename": "aerial_google_z18.jpg",
+          "type": "satellite"
+        },
+        {
+          "source": "Google Satellite",
+          "zoom": 19,
+          "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=19&size=640x640&maptype=satellite&key=DEMO_KEY",
+          "filename": "aerial_google_z19.jpg",
+          "type": "satellite"
+        },
+        {
+          "source": "Google Satellite",
+          "zoom": 20,
+          "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=20&size=640x640&maptype=satellite&key=DEMO_KEY",
+          "filename": "aerial_google_z20.jpg",
+          "type": "satellite"
+        },
+        {
+          "source": "Google Satellite",
+          "zoom": 21,
+          "url": "https://maps.googleapis.com/maps/api/staticmap?center=-37.8923,144.6234&zoom=21&size=640x640&maptype=satellite&key=DEMO_KEY",
+          "filename": "aerial_google_z21.jpg",
+          "type": "satellite"
+        },
+        {
+          "source": "Nearmap (High-Res)",
+          "zoom": 22,
+          "url": "https://api.nearmap.com/coverage/v2/coord/-37.8923/144.6234?apikey=DEMO",
+          "filename": "aerial_nearmap_hires.jpg",
+          "type": "high-resolution",
+          "resolution": "5cm/pixel"
+        }
+      ],
+      "output": "aerial_mosaic.jpg",
+      "options": {
+        "alignment": "affine",
+        "blending": "feather"
+      }
+    },
+    "interior": {
+      "method": "cubemap",
+      "description": "Requires user-uploaded photos",
+      "recommendedTools": [
+        "Matterport",
+        "Cupix",
+        "Google Street View Studio",
+        "OpenDroneMap"
+      ]
+    }
+  },
+  "reconstructionPlan": {
+    "title": "3D Property Visualization Plan",
+    "approaches": [
+      {
+        "name": "Photogrammetry (Recommended)",
+        "description": "Create 3D model from photos using computer vision",
+        "tools": [
+          {
+            "name": "OpenDroneMap",
+            "url": "https://www.opendronemap.org/",
+            "cost": "Free (Open Source)",
+            "complexity": "Medium",
+            "output": "3D mesh, point cloud, orthophoto"
+          },
+          {
+            "name": "Meshroom",
+            "url": "https://alicevision.org/#meshroom",
+            "cost": "Free (Open Source)",
+            "complexity": "Medium",
+            "output": "3D mesh, textures"
+          },
+          {
+            "name": "RealityCapture",
+            "url": "https://www.capturingreality.com/",
+            "cost": "Paid (~$3,500 license)",
+            "complexity": "Low",
+            "output": "High-quality 3D model"
+          }
+        ],
+        "requirements": {
+          "minPhotos": 50,
+          "overlap": "60-80%",
+          "resolution": "Minimum 12MP camera",
+          "processingTime": "2-8 hours depending on photo count"
+        }
+      },
+      {
+        "name": "360° Virtual Tour",
+        "description": "Interactive panoramic tour without full 3D model",
+        "tools": [
+          {
+            "name": "Matterport",
+            "url": "https://matterport.com/",
+            "cost": "Subscription ($9-309/month)",
+            "complexity": "Low",
+            "requires": "Matterport camera or compatible phone"
+          },
+          {
+            "name": "Cupix",
+            "url": "https://www.cupix.com/",
+            "cost": "Subscription",
+            "complexity": "Low",
+            "requires": "360° camera or phone app"
+          },
+          {
+            "name": "Google Street View",
+            "url": "https://www.google.com/streetview/",
+            "cost": "Free",
+            "complexity": "Low",
+            "requires": "360° camera or Street View app"
+          }
+        ],
+        "requirements": {
+          "minPhotos": "10-20 panoramas",
+          "equipment": "360° camera recommended",
+          "processingTime": "1-2 hours"
+        }
+      },
+      {
+        "name": "LiDAR Scanning",
+        "description": "High-precision 3D scanning",
+        "tools": [
+          {
+            "name": "iPhone/iPad Pro LiDAR",
+            "cost": "Free apps available",
+            "complexity": "Low",
+            "apps": [
+              "Polycam",
+              "Scaniverse",
+              "3D Scanner App"
+            ]
+          },
+          {
+            "name": "Professional Scanner",
+            "cost": "Hire service ($500-2000)",
+            "complexity": "None (outsourced)",
+            "accuracy": "Millimeter precision"
+          }
+        ],
+        "bestFor": "Interior spaces, detailed measurements"
+      }
+    ],
+    "recommendation": {
+      "approach": "Photogrammetry + 360° Tour",
+      "reasoning": "Best balance of quality, cost, and ease",
+      "workflow": [
+        "1. Take 100+ photos following the photo guide",
+        "2. Process with OpenDroneMap for 3D model",
+        "3. Create 360° panoramas for key rooms",
+        "4. Combine into interactive web experience"
+      ]
+    },
+    "outputFormats": {
+      "web": [
+        "Three.js visualization",
+        "WebGL viewer",
+        "Embedded 360° tour"
+      ],
+      "model": [
+        "OBJ",
+        "FBX",
+        "glTF",
+        "PLY (point cloud)"
+      ],
+      "measurements": "Accurate to 1-2% of real dimensions"
+    }
+  }
+}

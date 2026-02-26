@@ -1,0 +1,130 @@
+{
+  "title": "Property Photo Upload Guide",
+  "purpose": "Create virtual tour and 3D reconstruction",
+  "requiredShots": [
+    {
+      "id": "exterior_front",
+      "name": "Front Exterior",
+      "description": "Full front facade from street",
+      "angle": "Eye level",
+      "instructions": "Stand across the street, capture entire front including roofline"
+    },
+    {
+      "id": "exterior_left",
+      "name": "Left Side",
+      "description": "Left side of house",
+      "angle": "Perpendicular to wall",
+      "instructions": "Stand at property boundary, capture full side elevation"
+    },
+    {
+      "id": "exterior_right",
+      "name": "Right Side",
+      "description": "Right side of house",
+      "angle": "Perpendicular to wall",
+      "instructions": "Stand at property boundary, capture full side elevation"
+    },
+    {
+      "id": "exterior_rear",
+      "name": "Rear Exterior",
+      "description": "Back of house",
+      "angle": "Eye level",
+      "instructions": "From backyard, capture entire rear facade"
+    },
+    {
+      "id": "roof_overview",
+      "name": "Roof Overview",
+      "description": "Roof from elevated position",
+      "angle": "High angle",
+      "instructions": "From upstairs window or drone if possible"
+    },
+    {
+      "id": "driveway",
+      "name": "Driveway & Entry",
+      "description": "Approach to house",
+      "angle": "Low angle",
+      "instructions": "Capture driveway, path, and front entry"
+    },
+    {
+      "id": "garden_front",
+      "name": "Front Garden",
+      "description": "Landscaping and front yard",
+      "angle": "Eye level",
+      "instructions": "Capture garden beds, lawn, trees"
+    },
+    {
+      "id": "garden_rear",
+      "name": "Rear Garden",
+      "description": "Backyard area",
+      "angle": "Eye level",
+      "instructions": "Full backyard view including boundaries"
+    }
+  ],
+  "interiorShots": [
+    {
+      "id": "entry_hall",
+      "name": "Entry Hall",
+      "description": "Main entrance interior",
+      "instructions": "From doorway, capture full view of entry space"
+    },
+    {
+      "id": "living_room",
+      "name": "Living Room",
+      "description": "Main living area",
+      "instructions": "From each corner, capture all walls and features"
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "description": "Kitchen area",
+      "instructions": "Capture all cabinets, appliances, and layout"
+    },
+    {
+      "id": "kitchen_panorama",
+      "name": "Kitchen Panorama",
+      "description": "360° view of kitchen",
+      "instructions": "Stand in center, rotate and capture all angles"
+    },
+    {
+      "id": "master_bedroom",
+      "name": "Master Bedroom",
+      "description": "Main bedroom",
+      "instructions": "From doorway and opposite corner"
+    },
+    {
+      "id": "bathroom_main",
+      "name": "Main Bathroom",
+      "description": "Primary bathroom",
+      "instructions": "Capture all fixtures, tiles, and layout"
+    },
+    {
+      "id": "hallway",
+      "name": "Hallway",
+      "description": "Main circulation space",
+      "instructions": "Capture length and connections to rooms"
+    },
+    {
+      "id": "ceiling_details",
+      "name": "Ceiling Details",
+      "description": "Ceiling features",
+      "instructions": "Capture cornices, downlights, ceiling condition"
+    }
+  ],
+  "bestPractices": [
+    "Use natural daylight when possible",
+    "Take photos in landscape (horizontal) orientation",
+    "Overlap shots by 20-30% for stitching",
+    "Keep camera level and steady",
+    "Include reference points (doors, windows) in multiple shots",
+    "Take multiple shots of each area from different angles",
+    "Use highest resolution setting on your camera",
+    "Label photos by room/location"
+  ],
+  "for3DReconstruction": [
+    "Minimum 50 photos for exterior 3D model",
+    "Minimum 30 photos per room for interior",
+    "Capture overlapping views (60% overlap ideal)",
+    "Include floor, walls, and ceiling in shots",
+    "Walk around the property in a systematic pattern",
+    "Take photos at consistent height (chest level)"
+  ]
+}
